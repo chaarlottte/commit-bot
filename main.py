@@ -19,11 +19,13 @@ def commit():
     os.system(f"git commit -m \"{datetimeStr}\"")
 
 def main():
-    for x in range(10):
+    x: int = 0
+    while True:
         editFile()
         commit()
+        if x % 10 == 0: os.system("git push")
         time.sleep(1)
-    os.system("git push")
+        x += 1
 
 if __name__ == "__main__":
     main()
