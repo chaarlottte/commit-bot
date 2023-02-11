@@ -23,7 +23,7 @@ def main():
     while True:
         editFile()
         commit()
-        if x % 10 == 0: os.system("git push")
+        if x % 100 == 0: os.system("git push")
         # time.sleep(1)
         x += 1
 
