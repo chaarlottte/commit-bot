@@ -24,7 +24,7 @@ def main():
         editFile()
         commit()
         if x % 10 == 0: os.system("git push")
-        time.sleep(1)
+        # time.sleep(1)
         x += 1
 
 if __name__ == "__main__":
