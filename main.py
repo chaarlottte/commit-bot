@@ -1,4 +1,4 @@
-import os, datetime, time
+import os, datetime, time, random
 
 fileContent = """
 # Commit Bot by chaarlottte
@@ -6,15 +6,15 @@ fileContent = """
 Last commit: """
 
 fileName = "README.md"
+datetimeStr = datetime.datetime.now().strftime("%c")
 
 def editFile():
-    datetimeStr = datetime.datetime.now().strftime("%c")
+    datetimeStr = datetime.datetime.now().strftime("%c") + " - " + str(random.random())
     with open(fileName, "w") as f:
         f.write(fileContent + datetimeStr)
         f.close()
 
 def commit():
-    datetimeStr = datetime.datetime.now().strftime("%c")
     os.system("git add .")
     os.system(f"git commit -m \"{datetimeStr}\"")
 
