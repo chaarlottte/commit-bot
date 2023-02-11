@@ -24,3 +24,6 @@ def main():
         commit()
         time.sleep(1)
     os.system("git push")
+
+if __name__ == "__main__":
+    main()
