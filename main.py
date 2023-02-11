@@ -12,7 +12,6 @@ def editFile():
     datetimeStr = datetime.datetime.now().strftime("%c") + " - " + str(random.random())
     with open(fileName, "w") as f:
         f.write(fileContent + datetimeStr)
-        f.close()
 
 def commit():
     os.system("git add .")
